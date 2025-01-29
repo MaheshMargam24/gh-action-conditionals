@@ -85,5 +85,5 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
         - name: Print Reusable job output
-          run: echo "${{ needs.deploy.outputs.result }}""
+          run: echo "${{ needs.deploy.outputs.result }}"
         
