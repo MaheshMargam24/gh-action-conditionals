@@ -79,3 +79,11 @@ jobs:
       - run: |
           echo 'running report job'
           echo 'Some job has failed'
+
+  output-reusable:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps: 
+        - name: Print Reusable job output
+          run: echo "${{ needs.deploy.outputs.result }}""
+        
